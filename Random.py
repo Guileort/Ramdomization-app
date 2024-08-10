@@ -43,7 +43,7 @@ def form_groups_from_excel(df):
     return high_score_groups + low_score_groups
 
 # Streamlit app
-st.title("ALEATORIZACION DE GRUPOS")
+st.title(":red [APLICACION PARA LA ALEATORIZACION DE GRUPOS]" )
 
 st.write("Cargue un archivo Excel con columnas tituladas:  'First Name', 'Last Name', and 'Score'.")
 
@@ -58,7 +58,7 @@ if uploaded_file is not None:
     groups = form_groups_from_excel(df)
 
     # Display the groups
-    st.write("### Grupos Formados:")
+    st.write("### Grupos:")
     for idx, group in enumerate(groups, start=1):
         if len(group) == 3:
             st.write(f"**Grupo {idx}:** {group[0]}, {group[1]} y {group[2]}")
