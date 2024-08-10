@@ -1,6 +1,4 @@
-conda install -c anaconda openpyxl
 import streamlit as st
-import openpyxl
 import pandas as pd
 import random
 from time import sleep
@@ -53,7 +51,7 @@ uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx"])
 
 if uploaded_file is not None:
     # Read the uploaded file into a DataFrame
-    df = openpyxl.load_workbook(uploaded_file)
+    df = pd.read_excel(uploaded_file)
 
     # Form the groups
     groups = form_groups_from_excel(df)
