@@ -53,7 +53,7 @@ uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx"])
 if uploaded_file is not None:
     # Read the uploaded file into a DataFrame
     df = pd.read_excel(uploaded_file)
-    st.(df)
+    st.dataframe(df)
     # Form the groups
     groups = form_groups_from_excel(df)
 
