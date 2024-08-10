@@ -44,7 +44,7 @@ def form_groups_from_excel(df):
 
 # Streamlit app
 
-new_title = '<p style="font-family:sans-serif; color:Green; font-size: 42px;">APLICACION PARA LA ALEATORIZACION DE GRUPOS</p>'
+new_title = '<p style="font-family:sans-serif; color:red; font-size: 32px;">APLICACION PARA LA ALEATORIZACION DE GRUPOS</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 
 st.write("Cargue un archivo Excel con columnas tituladas:  'First Name', 'Last Name', and 'Score'.")
