@@ -1,5 +1,6 @@
-import streamlit as st
+
 import pandas as pd
+import streamlit as st
 import random
 from time import sleep
 
@@ -52,7 +53,7 @@ uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx"])
 if uploaded_file is not None:
     # Read the uploaded file into a DataFrame
     df = pd.read_excel(uploaded_file)
-
+    st.(df)
     # Form the groups
     groups = form_groups_from_excel(df)
 
