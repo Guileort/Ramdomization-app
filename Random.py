@@ -1,7 +1,7 @@
 
 import pandas as pd
 import streamlit as st
-import random
+import numpy as np
 from time import sleep
 
 def form_groups_from_excel(df):
@@ -13,8 +13,8 @@ def form_groups_from_excel(df):
     low_score_names = df[df['Score'] < 3.5]['Full Name'].tolist()
 
     # Shuffle the lists to randomize the groups
-    random.shuffle(high_score_names)
-    random.shuffle(low_score_names)
+    np.random.shuffle(high_score_names)
+    np.random.shuffle(low_score_names)
 
 
 # If high_score_names has an odd number of names, move one to low_score_names
