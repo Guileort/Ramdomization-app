@@ -43,17 +43,17 @@ def form_groups_from_excel(df):
     return high_score_groups + low_score_groups
 
 # Streamlit app
-st.title("ALEATORIZACION DE GRUPOS App")
+st.title("ALEATORIZACION DE GRUPOS")
 
 st.write("Cargue un archivo Excel con columnas tituladas:  'First Name', 'Last Name', and 'Score'.")
 
 # File uploader
-uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx"])
+uploaded_file = st.file_uploader("Seleccione un archivo de excel", type=["xlsx"])
 
 if uploaded_file is not None:
     # Read the uploaded file into a DataFrame
     df = pd.read_excel(uploaded_file)
-    st.dataframe(df)
+    
     # Form the groups
     groups = form_groups_from_excel(df)
 
