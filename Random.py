@@ -43,7 +43,7 @@ def form_groups_from_excel(df):
     return high_score_groups + low_score_groups
 
 # Streamlit app
-st.markdown(":red [APLICACION PARA LA ALEATORIZACION DE GRUPOS]" )
+st.markdown("_:red[APLICACION PARA LA ALEATORIZACION DE GRUPOS]_" )
 
 st.write("Cargue un archivo Excel con columnas tituladas:  'First Name', 'Last Name', and 'Score'.")
 
