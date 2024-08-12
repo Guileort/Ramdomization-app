@@ -3,6 +3,10 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 from time import sleep
+from streamlit_extras.app_logo import add_logo
+
+
+
 
 def form_groups_from_excel(df):
     # Combine the first and last names into a full name
@@ -48,6 +52,13 @@ new_title = '<p style="font-family:sans-serif; color:red; font-size: 32px;">APLI
 st.markdown(new_title, unsafe_allow_html=True)
 
 st.write("Cargue un archivo Excel con columnas tituladas:  'First Name', 'Last Name', and 'Score'.")
+
+
+
+def logo():
+    add_logo("Icono.png", height=300)
+
+
 
 # File uploader
 uploaded_file = st.file_uploader("Seleccione un archivo de excel", type=["xlsx"])
