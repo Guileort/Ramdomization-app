@@ -47,16 +47,11 @@ def form_groups_from_excel(df):
     return high_score_groups + low_score_groups
 
 # Streamlit app
-st.image("https://github.com/Guileort/Ramdomization-app/blob/main/Icono.png", width=100)
+st.image("https://github.com/Guileort/Ramdomization-app/blob/c08bfc5957e87232bcebfdd4086ba0ba2c4b1829/logo.jpg", width=100)
 new_title = '<p style="font-family:sans-serif; color:red; font-size: 32px;">APLICACION PARA LA ALEATORIZACION DE GRUPOS</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 
 st.write("Cargue un archivo Excel con columnas tituladas:  'First Name', 'Last Name', and 'Score'.")
-
-
-
-def logo():
-    add_logo("Icono.png", height=300)
 
 
 
