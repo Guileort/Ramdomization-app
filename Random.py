@@ -47,7 +47,7 @@ def form_groups_from_excel(df):
     return high_score_groups + low_score_groups
 
 # Streamlit app
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Compound_of_dodecahedron_and_icosahedron.png/240px-Compound_of_dodecahedron_and_icosahedron.png", width=100)
+st.image("https://github.com/Guileort/Ramdomization-app/blob/main/logo.jpg?raw=true", width=100)
 new_title = '<p style="font-family:sans-serif; color:red; font-size: 32px;">APLICACION PARA LA ALEATORIZACION DE GRUPOS</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 
