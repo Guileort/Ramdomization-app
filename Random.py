@@ -49,7 +49,7 @@ def form_groups_from_excel(df):
 # Streamlit app
 
 left_co, cent_co,last_co = st.columns(3)
-with cent_co:
+with last_co:
     st.image("https://raw.githubusercontent.com/Guileort/Ramdomization-app/f4555721973318b15276a5276830b5400109d175/logo.svg?raw=true", width=100)
 
 
