@@ -47,8 +47,7 @@ def form_groups_from_excel(df):
     return high_score_groups + low_score_groups
 
 # Streamlit app
-st.image("https://github.com/Guileort/Ramdomization-app/blob/main/logo.jpg?raw=true", width=100)
-st.image("https://raw.githubusercontent.com/Guileort/Ramdomization-app/f4555721973318b15276a5276830b5400109d175/logo.svg?raw=true", width=1000)
+st.image("https://raw.githubusercontent.com/Guileort/Ramdomization-app/f4555721973318b15276a5276830b5400109d175/logo.svg?raw=true", width=100)
 new_title = '<p style="font-family:sans-serif; color:rgb(0, 0, 139); font-size: 32px; font-weight: bold"> Aleatoreitor APP</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 st.write("Aleatoriza tus grupos en parejas, solo toma unos segundos.")
