@@ -48,7 +48,7 @@ def form_groups_from_excel(df):
 
 # Streamlit app
 st.image("https://github.com/Guileort/Ramdomization-app/blob/main/logo.jpg?raw=true", width=100)
-st.image("https://raw.githubusercontent.com/Guileort/Ramdomization-app/8f166dc16cc63ff69aae73d1a07d67f41ce4caea/logo.svg?raw=true", width=100)
+st.image("https://raw.githubusercontent.com/Guileort/Ramdomization-app/8f166dc16cc63ff69aae73d1a07d67f41ce4caea/logo.svg?raw=true", width=1000)
 new_title = '<p style="font-family:sans-serif; color:rgb(0, 0, 139); font-size: 32px; font-weight: bold"> Aleatoreitor APP</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 st.write("Aleatoriza tus grupos en parejas, solo toma unos segundos.")
