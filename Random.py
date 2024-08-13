@@ -47,10 +47,16 @@ def form_groups_from_excel(df):
     return high_score_groups + low_score_groups
 
 # Streamlit app
+col1, col2, col3 = st.beta_columns([1,6,1])
+
+with col1:
 st.image("https://raw.githubusercontent.com/Guileort/Ramdomization-app/f4555721973318b15276a5276830b5400109d175/logo.svg?raw=true", width=100)
+
+with col2:
 new_title = '<p style="font-family:sans-serif; color:rgb(0, 0, 139); font-size: 32px; font-weight: bold"> Aleatoreitor APP</p>'
 st.markdown(new_title, unsafe_allow_html=True)
-st.write("Aleatoriza tus grupos en parejas, solo toma unos segundos.")
+
+st.write("Aleatorizar tus grupos en parejas, solo toma unos segundos.")
 
 st.write("Cargue un archivo Excel con columnas tituladas:  'First Name', 'Last Name', and 'Score'.")
 
