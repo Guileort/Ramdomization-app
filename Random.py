@@ -6,8 +6,6 @@ from time import sleep
 
 
 
-
-
 def form_groups_from_excel(df):
     # Combine the first and last names into a full name
     df['Full Name'] = df['First Name'] + ' ' + df['Last Name']
@@ -47,7 +45,7 @@ def form_groups_from_excel(df):
     return high_score_groups + low_score_groups
 
 # Streamlit app
-
+### Position logo on right side
 left_co, cent_co,last_co = st.columns(3)
 with last_co:
     st.image("https://raw.githubusercontent.com/Guileort/Ramdomization-app/f4555721973318b15276a5276830b5400109d175/logo.svg?raw=true", width=100)
