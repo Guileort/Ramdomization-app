@@ -48,7 +48,10 @@ def form_groups_from_excel(df):
 
 # Streamlit app
 
-st.image("https://raw.githubusercontent.com/Guileort/Ramdomization-app/f4555721973318b15276a5276830b5400109d175/logo.svg?raw=true", width=100)
+left_co, cent_co,last_co = st.columns(3)
+with cent_co:
+    st.image("https://raw.githubusercontent.com/Guileort/Ramdomization-app/f4555721973318b15276a5276830b5400109d175/logo.svg?raw=true", width=100)
+
 
 new_title = '<p style="font-family:sans-serif; color:rgb(0, 0, 139); font-size: 32px; font-weight: bold"> Aleatoreitor APP</p>'
 st.markdown(new_title, unsafe_allow_html=True)
