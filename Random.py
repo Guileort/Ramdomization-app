@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 from time import sleep
-
+from io import StringIO 
 
 
 def form_groups_from_excel(df):
@@ -70,7 +70,7 @@ if uploaded_file is not None:
     # Form the groups
     groups = form_groups_from_excel(df)
 
-# Display the groups
+ st.write("### Grupos:")
     group_data = []
     for idx, group in enumerate(groups, start=1):
         if len(group) == 3:
@@ -81,20 +81,20 @@ if uploaded_file is not None:
         group_data.append([f"Grupo {idx}"] + list(group))
         sleep(2)
     
-   # Create a DataFrame for the groups
+    # Create a DataFrame for the groups
     group_df = pd.DataFrame(group_data, columns=["Grupo", "Integrante 1", "Integrante 2", "Integrante 3"])
 
-    # Convert the DataFrame to an Excel file
-    excel_buffer = BytesIO()
-    group_df.to_excel(excel_buffer, index=False, engine='xlsxwriter')
-    excel_buffer.seek(0)
+    # Convert the DataFrame to a CSV file
+    csv_buffer = StringIO()
+    group_df.to_csv(csv_buffer, index=False)
+    csv_data = csv_buffer.getvalue()
 
-    # Add a download button for the Excel file
+    # Add a download button for the CSV file
     st.download_button(
-        label="Descargar lista de grupos en Excel",
-        data=excel_buffer,
-        file_name="grupos.xlsx",
-        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        label="Descargar lista de grupos en CSV",
+        data=csv_data,
+        file_name="grupos.csv",
+        mime="text/csv"
     )
 else:
     st.write("Por favor cargar un archivo Excel")
