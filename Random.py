@@ -70,7 +70,9 @@ if uploaded_file is not None:
     # Form the groups
     groups = form_groups_from_excel(df)
 
-    # Display the groupsgroups_text = ""
+# Display the groups
+    st.write("### Grupos:")
+    groups_text = ""
     for idx, group in enumerate(groups, start=1):
         if len(group) == 3:
             group_text = f"**Grupo {idx}:** {group[0]}, {group[1]} y {group[2]}"
