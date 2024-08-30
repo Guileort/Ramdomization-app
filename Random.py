@@ -83,7 +83,7 @@ if uploaded_file is not None:
     
     # Add a download button
     st.download_button(
-        label="Descargar lista de grupos",
+        label="Descargar Lista",
         data=groups_text,
         file_name="grupos.txt",
         mime="text/plain"
