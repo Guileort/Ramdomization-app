@@ -60,10 +60,17 @@ st.write("Cargue un archivo Excel con columnas tituladas: 'First Name', 'Last Na
 # Add custom CSS to change button color and font size
 st.markdown("""
     <style>
-    .stDownloadButton {
+    /* Customize the file uploader button */
+    .stFileUploader label {
         background-color: green;
         color: white;
-        font-size: 17px; /* Increased font size by 1 point */
+        font-size: 17px; /* Increase font size */
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .stFileUploader label:hover {
+        background-color: darkgreen;
+        color: white;
     }
     </style>
     """, unsafe_allow_html=True)
