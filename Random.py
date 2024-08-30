@@ -82,12 +82,20 @@ if uploaded_file is not None:
         groups_text += group_text + "\n"
         sleep(2)
     
-    # Add a download button
+   # Create a DataFrame for the groups
+    group_df = pd.DataFrame(group_data, columns=["Grupo", "Integrante 1", "Integrante 2", "Integrante 3"])
+
+    # Convert the DataFrame to an Excel file
+    excel_buffer = BytesIO()
+    group_df.to_excel(excel_buffer, index=False, engine='xlsxwriter')
+    excel_buffer.seek(0)
+
+    # Add a download button for the Excel file
     st.download_button(
-        label="Descargar lista de grupos",
-        data=groups_text,
-        file_name="grupos.txt",
-        mime="text/plain"
+        label="Descargar lista de grupos en Excel",
+        data=excel_buffer,
+        file_name="grupos.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
 else:
     st.write("Por favor cargar un archivo Excel")
