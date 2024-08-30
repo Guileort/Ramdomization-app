@@ -82,10 +82,10 @@ if uploaded_file is not None and randomize_button:
         else:
             group_text = f"Grupo {idx}: {group[0]} y {group[1]}"
         st.write(group_text)
-        group_data.append([f"Grupo {idx}"] + list(group))
+        group_data.append(group_text)
         sleep(2)
     
-  # Convert the groups list to a single text string
+    # Convert the groups list to a single text string
     txt_data = "\n".join(group_data)
 
     # Add a download button for the text file
