@@ -64,7 +64,7 @@ uploaded_file = st.file_uploader("Seleccione un archivo de excel", type=["xlsx"]
 
 
 # Button to repeat randomization
-randomize_button = st.button("Aleatorizar)
+randomize_button = st.button("Aleatorizar")
 
 if uploaded_file is not None and randomize_button:
     # Read the uploaded file into a DataFrame
