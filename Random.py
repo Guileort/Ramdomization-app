@@ -71,28 +71,22 @@ if uploaded_file is not None:
 
    # Display the groups
     st.write("### Grupos:")
-    group_data = []
+    groups_text = ""
     for idx, group in enumerate(groups, start=1):
         if len(group) == 3:
-            group_text = f"Grupo {idx}: {group[0]}, {group[1]} y {group[2]}"
+            group_text = f"**Grupo {idx}:** {group[0]}, {group[1]} y {group[2]}"
         else:
-            group_text = f"Grupo {idx}: {group[0]} y {group[1]}"
+            group_text = f"**Grupo {idx}:** {group[0]} y {group[1]}"
         st.write(group_text)
-        group_data.append([f"Grupo {idx}"] + list(group))
+        groups_text += group_text + "\n"
         sleep(2)
     
-    # Create a DataFrame for the groups
-    group_df = pd.DataFrame(group_data, columns=["Grupo", "Integrante 1", "Integrante 2", "Integrante 3"])
-
-    # Convert the DataFrame to a CSV string
-    csv_data = group_df.to_csv(index=False)
-
-    # Add a download button for the CSV file
+    # Add a download button
     st.download_button(
-        label="Descargar lista de grupos en CSV",
-        data=csv_data,
-        file_name="grupos.csv",
-        mime="text/csv"
+        label="Descargar lista de grupos",
+        data=groups_text,
+        file_name="grupos.txt",
+        mime="text/plain"
     )
 else:
     st.write("Por favor cargar un archivo Excel")
