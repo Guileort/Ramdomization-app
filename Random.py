@@ -64,7 +64,7 @@ uploaded_file = st.file_uploader("Seleccione un archivo de excel", type=["xlsx"]
 
 
 # Button to repeat randomization
-randomize_button = st.button("Repetir Aleatorización")
+randomize_button = st.button("Aleatorizar)
 
 if uploaded_file is not None and randomize_button:
     # Read the uploaded file into a DataFrame
@@ -85,15 +85,3 @@ if uploaded_file is not None and randomize_button:
         group_data.append(group_text)
         sleep(2)
     
-    # Convert the groups list to a single text string
-    txt_data = "\n".join(group_data)
-
-    # Add a download button for the text file
-    st.download_button(
-        label="Descargar lista de grupos en TXT",
-        data=txt_data,
-        file_name="grupos.txt",
-        mime="text/plain"
-    )
-else:
-    st.write("Por favor cargar un archivo Excel")
