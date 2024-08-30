@@ -70,7 +70,7 @@ if uploaded_file is not None:
     # Form the groups
     groups = form_groups_from_excel(df)
 
- st.write("### Grupos:")
+    st.write("### Grupos:")
     group_data = []
     for idx, group in enumerate(groups, start=1):
         if len(group) == 3:
