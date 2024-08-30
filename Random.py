@@ -56,7 +56,7 @@ st.markdown(new_title, unsafe_allow_html=True)
 
 st.write("Aleatorizar tus grupos en parejas, solo toma unos segundos.")
 
-st.write("Cargue un archivo Excel con columnas tituladas:  'First Name', 'Last Name', and 'Score'.")
+st.write("Cargue un archivo Excel con columnas tituladas:  'First Name', 'Last Name'.")
 
 
 
@@ -70,13 +70,22 @@ if uploaded_file is not None:
     # Form the groups
     groups = form_groups_from_excel(df)
 
-    # Display the groups
-    st.write("### Grupos:")
+    # Display the groupsgroups_text = ""
     for idx, group in enumerate(groups, start=1):
         if len(group) == 3:
-            st.write(f"**Grupo {idx}:** {group[0]}, {group[1]} y {group[2]}")
+            group_text = f"**Grupo {idx}:** {group[0]}, {group[1]} y {group[2]}"
         else:
-            st.write(f"**Grupo {idx}:** {group[0]} y {group[1]}")
-        sleep(2)    
+            group_text = f"**Grupo {idx}:** {group[0]} y {group[1]}"
+        st.write(group_text)
+        groups_text += group_text + "\n"
+        sleep(2)
+    
+    # Add a download button
+    st.download_button(
+        label="Descargar lista de grupos",
+        data=groups_text,
+        file_name="grupos.txt",
+        mime="text/plain"
+    )
 else:
     st.write("Por favor cargar un archivo Excel")
