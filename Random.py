@@ -2,8 +2,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-from time import sleep
-from io import StringIO 
+from time import sleep 
 
 
 def form_groups_from_excel(df):
@@ -70,6 +69,7 @@ if uploaded_file is not None:
     # Form the groups
     groups = form_groups_from_excel(df)
 
+   # Display the groups
     st.write("### Grupos:")
     group_data = []
     for idx, group in enumerate(groups, start=1):
@@ -84,10 +84,8 @@ if uploaded_file is not None:
     # Create a DataFrame for the groups
     group_df = pd.DataFrame(group_data, columns=["Grupo", "Integrante 1", "Integrante 2", "Integrante 3"])
 
-    # Convert the DataFrame to a CSV file
-    csv_buffer = StringIO()
-    group_df.to_csv(csv_buffer, index=False)
-    csv_data = csv_buffer.getvalue()
+    # Convert the DataFrame to a CSV string
+    csv_data = group_df.to_csv(index=False)
 
     # Add a download button for the CSV file
     st.download_button(
