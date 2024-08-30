@@ -55,9 +55,18 @@ st.markdown(new_title, unsafe_allow_html=True)
 
 st.write("Aleatorizar tus grupos en parejas, solo toma unos segundos.")
 
-st.write("Cargue un archivo Excel con columnas tituladas:  'First Name', 'Last Name'.")
+st.write("Cargue un archivo Excel con columnas tituladas: 'First Name', 'Last Name'.")
 
-
+# Add custom CSS to change button color and font size
+st.markdown("""
+    <style>
+    .stDownloadButton {
+        background-color: green;
+        color: white;
+        font-size: 17px; /* Increased font size by 1 point */
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 # File uploader
 uploaded_file = st.file_uploader("Seleccione un archivo de excel", type=["xlsx"])
