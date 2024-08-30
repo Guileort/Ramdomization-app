@@ -85,18 +85,15 @@ if uploaded_file is not None and randomize_button:
         group_data.append([f"Grupo {idx}"] + list(group))
         sleep(2)
     
-    # Create a DataFrame for the groups
-    group_df = pd.DataFrame(group_data, columns=["Grupo", "Integrante 1", "Integrante 2", "Integrante 3"])
+  # Convert the groups list to a single text string
+    txt_data = "\n".join(group_data)
 
-    # Convert the DataFrame to a CSV string
-    csv_data = group_df.to_csv(index=False)
-
-    # Add a download button for the CSV file
+    # Add a download button for the text file
     st.download_button(
-        label="Descargar lista de grupos en CSV",
-        data=csv_data,
-        file_name="grupos.csv",
-        mime="text/csv"
+        label="Descargar lista de grupos en TXT",
+        data=txt_data,
+        file_name="grupos.txt",
+        mime="text/plain"
     )
 else:
     st.write("Por favor cargar un archivo Excel")
