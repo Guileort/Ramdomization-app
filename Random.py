@@ -53,7 +53,7 @@ with last_co:
 new_title = '<p style="font-family:sans-serif; color:rgb(0, 0, 139); font-size: 32px; font-weight: bold"> Aleatoreitor APP</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 
-st.write("Aleatorizar tus grupos en grupos de dos o tres personas, solo toma unos segundos.")
+st.write("Aleatoriza tu listado en grupos de dos o tres personas, solo toma unos segundos.")
 
 st.write("Cargue un archivo Excel con columnas tituladas: 'First Name', 'Last Name'.")
 
