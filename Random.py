@@ -56,7 +56,7 @@ st.markdown(new_title, unsafe_allow_html=True)
 
 st.write("Aleatoriza tu listado en grupos de dos o tres personas, solo toma unos segundos.")
 
-st.write("Cargue un archivo Excel con columnas tituladas: 'First Name', 'Last Name'.")
+st.write("Cargue un archivo Excel con columnas tituladas: 'First Name', 'Last Name', ID.")
 
 # Add custom CSS to change button color and font size
 st.markdown("""
