@@ -96,5 +96,5 @@ if uploaded_file is not None and randomize_button:
             group_text = f"**Grupo {idx}**: {group[0]}, {group[1]} y {group[2]}"
         else:
             group_text = f"**Grupo {idx}**: {group[0]} y {group[1]}"
-        st.markdown(f"**Grupo {idx}:** {group_text}",  unsafe_allow_html=True)
+        st.markdown(f"{group_text}",  unsafe_allow_html=True)
         sleep(2)
