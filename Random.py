@@ -90,11 +90,11 @@ if uploaded_file is not None and randomize_button:
 
     # Display the groups
     st.write("### Grupos:")
-    group_data = []
+    
     for idx, group in enumerate(groups, start=1):
         if len(group) == 3:
             group_text = f"Grupo {idx}: {group[0]}, {group[1]} y {group[2]}"
         else:
             group_text = f"Grupo {idx}: {group[0]} y {group[1]}"
-        st.markdown(f"**Grupo {idx}:** {group_text}")
+        st.markdown(f"**Grupo {idx}:** {group_text}",  unsafe_allow_html=True)
         sleep(2)
