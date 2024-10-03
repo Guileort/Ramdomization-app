@@ -93,9 +93,9 @@ if uploaded_file is not None and randomize_button:
     group_data = []
     for idx, group in enumerate(groups, start=1):
         if len(group) == 3:
-            group_text = f"\033[1m" + Grupo {idx} + "\033[0m" : {group[0]}, {group[1]} y {group[2]}"
+            group_text = f"Grupo {idx}: {group[0]}, {group[1]} y {group[2]}"
         else:
             group_text = f"Grupo {idx}: {group[0]} y {group[1]}"
-        st.write(group_text)
+        st.markdown(f"**Grupo {idx}:** {group_text}")
         group_data.append(group_text)
         sleep(2)
