@@ -93,7 +93,7 @@ if uploaded_file is not None and randomize_button:
     
     for idx, group in enumerate(groups, start=1):
         if len(group) == 3:
-            group_text = f"**Grupo {idx}**: {group[0]}, {group[1]} y {group[2]}"
+            group_text = f"**Grupo {idx}**: {group[0]}, {group[1]}  + ' ' + y ' ' + {group[2]}"
         else:
             group_text = f"**Grupo {idx}**: {group[0]} y {group[1]}"
         st.markdown(f"{group_text}",  unsafe_allow_html=True)
