@@ -8,9 +8,9 @@ def form_groups_from_excel(df):
     df['Full Name'] = df['First Name'] + ' ' + df['Last Name']
 
     # Separate names based on the score into three categories: high, medium, low
-    high_score_names = df[df['ID'] >= 3.8]['Full Name'].tolist()
-    medium_score_names = df[(df['ID'] >= 3.2) & (df['ID'] < 3.8)]['Full Name'].tolist()
-    low_score_names = df[df['ID'] < 3.2]['Full Name'].tolist()
+    high_score_names = df[df['ID'] >= 4.0]['Full Name'].tolist()
+    medium_score_names = df[(df['ID'] >= 3.5) & (df['ID'] < 4.0)]['Full Name'].tolist()
+    low_score_names = df[df['ID'] < 3.5]['Full Name'].tolist()
 
     # Shuffle the lists to randomize the groups
     np.random.shuffle(high_score_names)
